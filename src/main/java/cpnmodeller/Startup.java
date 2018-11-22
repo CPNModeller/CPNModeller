@@ -1,10 +1,13 @@
 package cpnmodeller;
 
+import cpnmodeller.gui.Window;
+
 import javax.swing.*;
 
 public class Startup {
     private static void createAndShowGUI() {
-        // Create the window
+        Window window = new Window("CPN Modeller");
+        window.create();
     }
 
     public static void main(String[] args) {
