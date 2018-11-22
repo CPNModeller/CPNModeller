@@ -12,5 +12,7 @@ public final class TextEditorPanel extends JPanel {
 
         setLayout(new BorderLayout());
         add(textPane, BorderLayout.CENTER);
+
+        setPreferredSize(new Dimension(600, 500));
     }
 }

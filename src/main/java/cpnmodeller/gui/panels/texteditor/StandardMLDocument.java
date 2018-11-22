@@ -19,6 +19,7 @@ public class StandardMLDocument extends DefaultStyledDocument {
         keywords.add("in");
         keywords.add("end");
         keywords.add("if");
+        keywords.add("then");
         keywords.add("else");
 
         StringBuilder builder = new StringBuilder("(\\W)*(");
@@ -35,9 +36,12 @@ public class StandardMLDocument extends DefaultStyledDocument {
         KEYWORD_REGEX = builder.toString();
 
         final StyleContext cont = StyleContext.getDefaultStyleContext();
-        AttributeSet attrKeyword = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, Color.RED);
+        AttributeSet attrRegular = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, Color.BLACK);
+        attrRegular = cont.addAttribute(attrRegular, StyleConstants.Bold, false);
+        REGULAR_ATTR = cont.addAttribute(attrRegular, StyleConstants.FontSize, 18);
+
+        AttributeSet attrKeyword = cont.addAttribute(REGULAR_ATTR, StyleConstants.Foreground, Color.RED);
         KEYWORD_ATTR = cont.addAttribute(attrKeyword, StyleConstants.Bold, true);
-        REGULAR_ATTR = cont.addAttribute(cont.getEmptySet(), StyleConstants.Foreground, Color.BLACK);
     }
 
     @Override
