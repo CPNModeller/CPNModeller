@@ -1,7 +1,7 @@
 /*
  * Generated on 11/26/18, 2:49 PM
  */
-package cpnmodeller.gui.panels.texteditor;
+package cpnmodeller.gui.texteditor;
 
 import java.io.*;
 import javax.swing.text.Segment;

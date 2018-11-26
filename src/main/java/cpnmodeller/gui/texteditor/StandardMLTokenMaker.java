@@ -1,4 +1,4 @@
-package cpnmodeller.gui.panels.texteditor;
+package cpnmodeller.gui.texteditor;
 
 import java.io.*;
 import javax.swing.text.Segment;

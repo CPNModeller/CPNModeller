@@ -1,4 +1,4 @@
-package cpnmodeller.gui.panels.texteditor;
+package cpnmodeller.gui.texteditor;
 
 import org.fife.ui.rsyntaxtextarea.AbstractTokenMakerFactory;
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;

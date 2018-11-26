@@ -3,9 +3,9 @@ package cpnmodeller.gui.grapheditor;
 import javax.swing.*;
 import java.awt.*;
 
-public class GraphEditor extends JPanel {
+public class GraphEditorPanel extends JPanel {
 
-    public GraphEditor(){
+    public GraphEditorPanel(){
         this.setBackground(Color.RED);
     }
 }

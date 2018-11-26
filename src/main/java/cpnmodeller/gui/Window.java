@@ -1,6 +1,6 @@
 package cpnmodeller.gui;
 
-import cpnmodeller.gui.panels.texteditor.TextEditorPanel;
+import cpnmodeller.gui.texteditor.TextEditorPanel;
 
 import javax.swing.*;
 
