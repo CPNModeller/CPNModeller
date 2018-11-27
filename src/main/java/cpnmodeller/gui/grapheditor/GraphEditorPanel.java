@@ -6,6 +6,7 @@ import java.awt.*;
 public class GraphEditorPanel extends JPanel {
 
     public GraphEditorPanel(){
-        this.setBackground(Color.RED);
+        setBackground(Color.RED);
+        setPreferredSize(new Dimension(500, 300));
     }
 }
