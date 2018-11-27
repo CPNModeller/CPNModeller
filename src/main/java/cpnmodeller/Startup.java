@@ -6,7 +6,12 @@ import javax.swing.*;
 
 public class Startup {
     private static void createAndShowGUI() {
-        Window window = new Window("CPN Modeller");
+
+        JToolBar toolBar = new JToolBar();
+        JMenuBar menuBar = new JMenuBar();
+        JSplitPane splitPane = new JSplitPane();
+
+        Window window = new Window("CPN Modeller", splitPane, menuBar, toolBar);
         window.create();
     }
 
