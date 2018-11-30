@@ -22,6 +22,7 @@ public class Window {
 
         frame.add(toolBar, BorderLayout.PAGE_START);
         frame.setJMenuBar(menuBar);
+
         frame.add(splitPane, BorderLayout.CENTER);
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
