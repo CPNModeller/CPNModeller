@@ -6,13 +6,13 @@ import java.awt.*;
 public class Window {
 
     private final String title;
-    private final JComponent mainComponent;
+    private final JSplitPane splitPane;
     private final JMenuBar menuBar;
     private final JToolBar toolBar;
 
-    public Window(String title, JComponent mainComponent, JMenuBar menuBar, JToolBar toolBar) {
+    public Window(String title, JSplitPane splitPane, JMenuBar menuBar, JToolBar toolBar) {
         this.title = title;
-        this.mainComponent = mainComponent;
+        this.splitPane = splitPane;
         this.menuBar = menuBar;
         this.toolBar = toolBar;
     }
@@ -22,7 +22,8 @@ public class Window {
 
         frame.add(toolBar, BorderLayout.PAGE_START);
         frame.setJMenuBar(menuBar);
-        frame.add(mainComponent, BorderLayout.CENTER);
+
+        frame.add(splitPane, BorderLayout.CENTER);
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
