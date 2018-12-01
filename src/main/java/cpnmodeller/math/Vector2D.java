@@ -40,6 +40,13 @@ public final class Vector2D {
         );
     }
 
+    public Vector2D scale(final Vector2D scale) {
+        return new Vector2D(
+                x * (1 / scale.x),
+                y * (1 / scale.y)
+        );
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,5 +59,10 @@ public final class Vector2D {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Vec{x=%s, y=%s}", x, y);
     }
 }
