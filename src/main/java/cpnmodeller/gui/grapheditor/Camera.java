@@ -22,7 +22,10 @@ public final class Camera {
     }
 
     public Vector2D apply(Vector2D point) {
-        return translation.subtract(point).scale(point);
+        return new Vector2D(
+                point.x * (1 / scale),
+                point.y * (1 / scale)
+        );
     }
 
     public Vector2D getTranslation() {

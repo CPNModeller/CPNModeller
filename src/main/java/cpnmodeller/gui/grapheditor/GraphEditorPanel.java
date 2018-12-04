@@ -42,17 +42,16 @@ public class GraphEditorPanel extends JPanel implements MouseMotionListener, Mou
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        Point point = e.getPoint();
-        Vector2D position = camera.apply(new Vector2D(point.x, point.y));
-        System.out.println(position);
+        Vector2D mousePosition = new Vector2D(e.getX(), e.getY());
 
         if (SwingUtilities.isMiddleMouseButton(e)) {
-            Vector2D delta = lastPoint.subtract(position);
+            Vector2D delta = mousePosition.subtract(lastPoint);
+
             camera.translate(delta);
             repaint();
         }
 
-        lastPoint = new Vector2D(point.x, point.y);
+        lastPoint = new Vector2D(mousePosition.x, mousePosition.y);
     }
 
     @Override
