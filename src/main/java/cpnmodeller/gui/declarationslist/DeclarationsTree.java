@@ -1,11 +1,10 @@
-package cpnmodeller.gui.definitionslist;
+package cpnmodeller.gui.declarationslist;
 
 import cpnmodeller.declarations.Declarations;
 import cpnmodeller.declarations.Globref;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.awt.*;
 import java.util.Set;
 
 public class DeclarationsTree{

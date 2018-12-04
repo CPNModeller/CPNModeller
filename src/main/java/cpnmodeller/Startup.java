@@ -2,8 +2,9 @@ package cpnmodeller;
 
 import cpnmodeller.declarations.Declarations;
 import cpnmodeller.gui.Window;
-import cpnmodeller.gui.definitionslist.DeclarationsTree;
-import cpnmodeller.gui.definitionslist.DefinitionsScrollPane;
+import cpnmodeller.gui.declarationslist.DeclarationsTree;
+import cpnmodeller.gui.declarationslist.DeclarationsScrollPane;
+import cpnmodeller.gui.grapheditor.GraphEditorPanel;
 import cpnmodeller.gui.menus.EditMenu;
 import cpnmodeller.gui.menus.FileMenu;
 import cpnmodeller.gui.menus.HelpMenu;
@@ -20,9 +21,8 @@ public class Startup {
         menuBar.add(new EditMenu());
         menuBar.add(new HelpMenu());
 
-        JScrollPane p = (new DefinitionsScrollPane(new DeclarationsTree(new Declarations()))).getJScrollPane();
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, p, new JPanel());
-        //splitPane.setLeftComponent(new DeclarationsTree());
+        JScrollPane p = (new DeclarationsScrollPane(new DeclarationsTree(new Declarations()))).getJScrollPane();
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, p, new GraphEditorPanel());
 
         Window window = new Window("CPN Modeller", splitPane, menuBar, toolBar);
         window.create();

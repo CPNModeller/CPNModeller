@@ -1,13 +1,13 @@
-package cpnmodeller.gui.definitionslist;
+package cpnmodeller.gui.declarationslist;
 
 import javax.swing.*;
 
-public class DefinitionsScrollPane{
+public class DeclarationsScrollPane {
 
     private DeclarationsTree declarationsTree;
     private JScrollPane scrollPane;
 
-    public DefinitionsScrollPane(DeclarationsTree t){
+    public DeclarationsScrollPane(DeclarationsTree t){
         this.declarationsTree = t;
         scrollPane = new JScrollPane(declarationsTree.getJTree());
     }
