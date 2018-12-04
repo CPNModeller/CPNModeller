@@ -4,11 +4,9 @@ import cpnmodeller.math.Vector2D;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
-public class GraphEditorPanel extends JPanel implements MouseMotionListener, MouseListener {
+public class GraphEditorPanel extends JPanel implements MouseMotionListener, MouseListener, MouseWheelListener {
 
     private final Grid grid;
     private final Camera camera;
@@ -30,6 +28,7 @@ public class GraphEditorPanel extends JPanel implements MouseMotionListener, Mou
 
         addMouseListener(this);
         addMouseMotionListener(this);
+        addMouseWheelListener(this);
     }
 
     @Override
@@ -82,5 +81,11 @@ public class GraphEditorPanel extends JPanel implements MouseMotionListener, Mou
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+
+    @Override
+    public void mouseWheelMoved(MouseWheelEvent e) {
+        camera.zoom(-e.getWheelRotation() * 0.01f);
+        repaint();
     }
 }

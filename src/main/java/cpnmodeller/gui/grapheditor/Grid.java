@@ -27,6 +27,8 @@ public final class Grid {
     }
 
     public void draw(Graphics2D g) {
+        final int size = (int) (this.size * camera.getScale());
+
         g.setColor(gridColor);
 
         final int gridOffsetX = (int) camera.getTranslation().x % size;
